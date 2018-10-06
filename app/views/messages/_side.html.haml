@@ -1,6 +1,6 @@
 .sidebar
   .header
-    .header__username
+    .header__user-name
     Rick
     / 名前仮置き
     .header__icon
@@ -9,3 +9,5 @@
 
       = link_to ('#') do
         = fa_icon 'cog'
+
+  =render 'messages/group-list'
