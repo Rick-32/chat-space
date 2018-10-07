@@ -1,0 +1,15 @@
+.right
+
+  .right__header
+    %a{ :href => '#', :id => 'edit_button' } Edit
+    %h4.group_name 選択中のグループ名
+    %p.group_member Members : 一覧がここに表示
+
+  = render 'message'
+
+  .right__bottom
+    %form
+      %input{type: "text", placeholder: "type a message", class: "form__text"}
+      %label{class: "fa fa-picture-o icon"}
+        %input{type: "file"}
+      %input{value: "Send", type: "submit", class: "btn"}
