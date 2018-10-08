@@ -3,9 +3,10 @@
     .icons
       = link_to "#" do
         = fa_icon "edit"
-      = link_to "#" do
+      = link_to edit_user_path(current_user) do
         = fa_icon "cog"
-    %p.user_name Rick
+    %p.user_name
+      = current_user.name
   .left__content
     %p.group_name グループ名１
     %p.group_latest-message 最新メッセージ１
