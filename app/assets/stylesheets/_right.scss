@@ -31,9 +31,9 @@
 // Bigin render file's SCSS_message
   &__content{
     background-color: #FAFAFA;
-    height: calc(100vw - 101px - 90px);
+    height: calc(100vh - 100px - 50px);
     width: 971px;
-    padding: 0 40px 70px 40px;
+    padding: 0 40px;
     overflow: auto;
 
     .post_name {

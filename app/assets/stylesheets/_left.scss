@@ -27,7 +27,7 @@
   }
   &__content{
     background-color: #2f3e51;
-    height: calc(100% - 41px);
+    height: calc(100vh - 100px + 40px );
     padding: 0 20px;
 
     .group_name {
