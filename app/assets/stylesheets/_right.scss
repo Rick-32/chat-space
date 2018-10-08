@@ -1,0 +1,93 @@
+.right{
+  width:calc(100vw - 315px);
+  float: left;
+
+  &__header{
+    background-color: $white;
+    height: 101px;
+    padding: 0 40px;
+
+    #edit_button {
+      text-decoration: none;
+      color: $lightblue;
+      margin-top: 28px;
+      border: solid;
+      border-width: 2px;
+      border-color: $lightblue;
+      padding: 8px 20px;
+      float: right;
+    }
+    .group_name {
+  color: #333333;
+  font-size: 20px;
+  padding: 35px 0 15px 0;
+  }
+    .group_member {
+      color: $gray;
+      font-size: 12px;
+      line-height: 9px;
+    }
+  }
+// Bigin render file's SCSS_message
+  &__content{
+    background-color: #FAFAFA;
+    height: calc(100vh - 100px - 50px);
+    width: 971px;
+    padding: 0 40px;
+    overflow: auto;
+
+    .post_name {
+      color: $lightgray;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 46px 0 10px 0;
+      float: left;
+      }
+    .timestamp {
+      color: $gray;
+      font-size: 14px;
+      padding: 50px 40px 10px 0;
+      margin-left: 10px;
+      float: left;
+    }
+    .post {
+      color: $lightgray;
+      font-size: 14px;
+      clear: both;
+    }
+  }
+// End render file's SCSS_message
+  &__bottom{
+    background-color: #AAAAAA;
+    height: 90px;
+    position: relative;
+
+    .form__text {
+      height: 50px;
+      width: calc( 100% - 40px * 2 - 93px);
+      box-sizing: border-box;
+      padding-left: 10px;
+      margin: 18px 13px 18px 38px;
+      font-size: 16px;
+      color:$lightgray;
+      float: left;
+    }
+    label {
+      position: absolute;
+      top: 38px;
+      right: 145px;
+      input {
+        display: none;
+      }
+    }
+    .btn {
+      height: 50px;
+      width: 80px;
+      margin: 20px 40px 0 0;
+      background-color: $lightblue;
+      color: $white;
+      border: none;
+      float: right;
+    }
+  }
+}
