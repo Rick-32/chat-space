@@ -34,6 +34,6 @@ end
   end
 
   def set_group
-    @group = Group.fing(params[:id])
+    @group = Group.find(params[:id])
   end
 end
