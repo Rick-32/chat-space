@@ -1,6 +1,16 @@
-/ %header
-/   %p チャットグループが作成されました。
-.content
-  = render 'left'
+!!!
+%html
+%head
+  %link(rel="stylesheet" type="text/css" href="application.scss")
+%body
+.wrapper
+  .side-bar
+    = render './left-side__user'
+    = render './left-side__groups'
 
-  = render 'right'
+  .chat-main
+    = render './chat-main__header'
+    .chat-main__body
+      .chat-main__body--list
+        = render @messages
+    = render './chat-main__footer'
