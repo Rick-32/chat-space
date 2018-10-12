@@ -1,17 +1,10 @@
-.right__content
-  .post_name A
-  %p.timestamp 2018/10/03 17:13:14
-  %p.post A said smt.
-
-  .post_name B
-  %p.timestamp 2018/10/03 17:13:18
-  %p.post B said smt.
-
-  .post_name C
-  %p.timestamp 2018/10/03 17:14:32
-  %p.post C said smt.
-
-  .post_name D
-  %p.timestamp 2018/10/03 17:15:11
-  %p.post D said smt.
-
+%div.chat-main__body--list--message{data: {message: {id:"#{message.id}"}}}
+  .chat-main__body--list--message--name
+    = message.user.name
+  .chat-main__body--list--message--time
+    = format_posted_time(message.created_at)
+  .chat-main__body--list--message--text
+    - if message.content.present?
+      %p
+        = message.content
+    = image_tag message.image.url if message.image.present?
