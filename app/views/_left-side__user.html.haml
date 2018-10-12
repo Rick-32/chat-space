@@ -1,0 +1,9 @@
+.left-side__user
+  .left-side__user--content
+    .left-side__user--content--name
+      = current_user.name
+    = link_to new_group_path, class: "left-side__user--content--newGroup" do
+      = fa_icon 'pencil-square-o', class: 'fa-pencil-square-o'
+    = link_to edit_user_path(current_user), class: "left-side__user--content--editUser" do
+      = fa_icon 'cog', class: 'fa-cog'
+

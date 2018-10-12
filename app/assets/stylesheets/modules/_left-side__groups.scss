@@ -1,0 +1,27 @@
+.left-side__groups {
+  a {
+    color: $white;
+    text-decoration-line: none;
+  }
+
+  height: 85%;
+  width: 100%;
+  background-color: $side_blue_dark;
+
+  &--content {
+    height: 100%;
+    color: $white;
+
+    &--group {
+      padding: 20px;
+
+      &--name {
+        font-size: 15px;
+      }
+
+      &--message {
+        font-size: 11px;
+      }
+    }
+  }
+}

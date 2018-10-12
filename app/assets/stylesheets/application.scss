@@ -1,11 +1,34 @@
-@import "./reset";
-@import "./_utility.scss";
-@import "./_flash.scss";
-@import "./_left.scss";
-@import "./_right.scss";
-@import "./_user.scss";
-@import "./_base.scss";
-@import "./_group.scss";
-@import "./_side_bar.scss";
-// @import "./_chat.scss";
+@import "./modules/_utility";
+@import "./_reset";
 @import "font-awesome";
+@import "./mixin/_mixin";
+@import "./modules/_notifications";
+@import "./modules/_user";
+@import "./modules/_group";
+@import "./modules/_left-side__user";
+@import "./modules/_left-side__groups";
+@import "./modules/_chat-main__header";
+@import "./modules/_chat-main__body";
+@import "./modules/_chat-main__footer";
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+
+  .side-bar {
+      height: 100vh;
+      width: 300px;
+      float: left;
+  }
+  .chat-main {
+     height: 100vh;
+      width: calc(100vw - 300px);
+      float: left;
+  }
+}
