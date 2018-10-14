@@ -1,23 +1,21 @@
 $(function () {
   function buildHTML(message) {
 
-    var image_url = "";
-    if (message.image_present) {
-      image_html = `<image src="${message.image_url}">`;
-    }
+    var content = message.content ? `${message.content} ` : ''
+    var image = message.image_url ? `<img src='${message.image_url}'> ` : ''
 
     var html = `<div class='chat-main__body--list--message{data: {message: {id:"#{message.id}"}}}'>
-                  <div class='chat-main__body--list--message--name'>
-                    ${message.user_name}
-                  </div>
-                <div class='chat-main__body--list--message--time'>
-                  ${message.created_at}
-                </div>
-                <div class='chat-main__body--list--message--text'>
-                  <p>${message.content}</p>
-                  ${image_url}
-                </div>
-              </div>`;
+                   <div class='chat-main__body--list--message--name'>
+                     ${message.user_name}
+                   </div>
+                 <div class='chat-main__body--list--message--time'>
+                   ${message.created_at}
+                 </div>
+                 <div class='chat-main__body--list--message--text'>
+                   <p>${message.content}
+                      ${image}</p>
+                 </div>
+               </div>`
   return html;
 };
 
