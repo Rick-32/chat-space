@@ -1,21 +1,26 @@
-$(function () {
+$(document).on('turbolinks:load', function () {
   function buildHTML(message) {
 
-    var content = message.content ? `${message.content} ` : ''
-    var image = message.image_url ? `<img src='${message.image_url}'> ` : ''
+    // var content = message.content ? `${message.content} ` : '';
+    var add_image = (message.image) ? `<image class='message--image' src="${message.image}">` : '';
+    // var add_image = "";
+    // if(message.image) {
+    //   add_image = `<img class="message--image" src="${ message.image }">`;
+    // }
 
-    var html = `<div class='chat-main__body--list--message{data: {message: {id:"#{message.id}"}}}'>
-                   <div class='chat-main__body--list--message--name'>
-                     ${message.user_name}
-                   </div>
-                 <div class='chat-main__body--list--message--time'>
-                   ${message.created_at}
-                 </div>
-                 <div class='chat-main__body--list--message--text'>
-                   <p>${message.content}
-                      ${image}</p>
-                 </div>
-               </div>`
+    var html =
+     `<div class='chat-main__body--list--message' data-message-id="${ message.id }">
+       <div class='chat-main__body--list--message--name'>
+         ${message.user_name}
+        </div>
+        <div class='chat-main__body--list--message--time'>
+         ${message.created_at}
+        </div>
+        <div class='chat-main__body--list--message--text'>
+         ${message.content}
+        </div>
+         ${add_image}
+      </div>`;
   return html;
 };
 
@@ -32,11 +37,10 @@ $(function () {
       processData: false,
       contentType: false
     })
-    .done(function (message) {
 
-      var html = buildHTML(message);
+    .done(function(data) {
+      var html = buildHTML(data);
       $('.chat-main__body--list').append(html)
-
       $('#message-content').val('')
       $('.chat-main__body').animate({
         scrollTop: $('.chat-main__body')[0].scrollHeight
