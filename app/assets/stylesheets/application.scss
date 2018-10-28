@@ -1,5 +1,6 @@
 @import "./modules/_utility";
 @import "./_reset";
+@import "./base";
 @import "font-awesome";
 @import "./mixin/_mixin";
 @import "./modules/_notifications";
@@ -10,25 +11,3 @@
 @import "./modules/_chat-main__header";
 @import "./modules/_chat-main__body";
 @import "./modules/_chat-main__footer";
-
-// body,
-// html {
-//     height: 100%;
-//     width: 100%;
-// }
-
-.wrapper {
-  height: 100vh;
-  width: 100vw;
-
-  .side-bar {
-      height: 100vh;
-      width: 300px;
-      float: left;
-  }
-  .chat-main {
-     height: 100vh;
-      width: calc(100vw - 300px);
-      float: left;
-  }
-}
