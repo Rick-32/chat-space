@@ -60,7 +60,6 @@ $(document).on('turbolinks:load', function () {
     var interval = setInterval(function (){
       if (window.location.href.match(/\/groups\/\d+\/messages/)){
           var message_id = $('.chat-main__body--list--message').last().data('message-id');
-          console.log(message_id);
           $.ajax({
             url: location.href.json,
             type: 'GET',
