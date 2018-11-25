@@ -15,6 +15,7 @@ function buildHTML(message) {
       </div>
        ${add_image}
     </div>`;
+
   return html;
 };
 
@@ -25,6 +26,7 @@ $(document).on('turbolinks:load', function () {
     var formData = new FormData(this);
     var url = $(this).attr('action');
     var href = window.location.href;
+
     $.ajax({
       url: href,
       type: "POST",
@@ -34,15 +36,16 @@ $(document).on('turbolinks:load', function () {
       contentType: false
     })
 
-    .done(function(data) {
-      var html = buildHTML(data);
+    .done(function (message) {
+
+      var html = buildHTML(message);
       $('.chat-main__body--list').append(html)
 
       $('#message-content').val('')
       $('.chat-main__body').animate({
         scrollTop: $('.chat-main__body')[0].scrollHeight
       }, 1000, 'swing');
-      })
+    })
     .fail(function () {
       alert('error');
     })
