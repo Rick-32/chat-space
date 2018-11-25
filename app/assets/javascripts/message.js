@@ -67,7 +67,7 @@ $(document).on('turbolinks:load', function () {
             dataType: 'json'
           })
           .done(function(data){
-            if (data.length != 0 ){
+            if (data.length !== 0 ){
               data.forEach(function(message){
                 var html = buildHTML(message);
                 $('.chat-main__body--list').append(html);
@@ -81,7 +81,7 @@ $(document).on('turbolinks:load', function () {
           .fail(function() {
             alert('自動更新に失敗しました');
           });
-         }else{
+         } else {
           clearInterval(interval);
       }}, 5000);
   });
