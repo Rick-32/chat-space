@@ -20,8 +20,6 @@ $(document).on('turbolinks:load', function () {
     return html;
 };
 
-
-
   $('#new-message').submit(function (e) {
     e.preventDefault();
     var formData = new FormData(this);
@@ -47,6 +45,7 @@ $(document).on('turbolinks:load', function () {
         scrollTop: $('.chat-main__body')[0].scrollHeight
       }, 1000, 'swing');
     })
+
     .fail(function () {
       alert('error');
     })
