@@ -61,7 +61,7 @@ $(document).on('turbolinks:load', function () {
       if (window.location.href.match(/\/groups\/\d+\/messages/)){
           var message_id = $('.chat-main__body--list--message').last().data('message-id');
           $.ajax({
-            url: location.href.json,
+            url: location.href,
             type: 'GET',
             data: {id: message_id},
             dataType: 'json'
