@@ -19,3 +19,5 @@
 public/uploads/*
 
 app/views/user-materials/
+
+config/secrets.yml
