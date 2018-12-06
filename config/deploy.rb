@@ -2,6 +2,8 @@
 # config valid only for current version of Capistrano
 lock '3.11.0'
 
+set :linked_files, %w{ config/secrets.yml }
+
 set :application, 'chat-space'
 set :repo_url,  'git@github.com:Rick-32/chat-space.git'
 
