@@ -1,4 +1,5 @@
-$(function () {
+$(document).on('turbolinks:load', function () {
+
   var member_list = $("#user-search-result");
   function appendMember(user) {
     var html = `<div class="chat-group-user clearfix">

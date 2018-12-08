@@ -39,8 +39,8 @@ $(document).on('turbolinks:load', function () {
 
       var html = buildHTML(message);
       $('.chat-main__body--list').append(html)
-
       $('#message-content').val('')
+      $('#message_uploadIcon').val('')
       $('.chat-main__body').animate({
         scrollTop: $('.chat-main__body')[0].scrollHeight
       }, 1000, 'swing');
@@ -49,9 +49,6 @@ $(document).on('turbolinks:load', function () {
     .fail(function () {
       alert('error');
     })
-    .always(function () {
-      $(".chat-main__footer--new-message--submit").removeAttr("disabled");
-    });
   });
 
 
